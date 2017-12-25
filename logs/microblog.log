@@ -1,4 +1,4 @@
-2017-12-24 21:19:15,809 ERROR: Exception on /search [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+2017-12-24 23:56:29,628 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,19 +12,18 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 143, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/models.py", line 15, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/search.py", line 26, in query_index
-    'from': (page - 1) * per_page, 'size': per_page})
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/client/utils.py", line 76, in _wrapped
-    return func(*args, params=params, **kwargs)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/client/__init__.py", line 636, in search
-    doc_type, '_search'), params=params, body=body)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/transport.py", line 314, in perform_request
-    status, headers, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/connection/http_urllib3.py", line 156, in perform_request
-    raise ConnectionError('N/A', str(e), e)
-ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x10cb4bad0>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x10cb4bad0>: Failed to establish a new connection: [Errno 61] Connection refused)
-2017-12-24 21:20:49,811 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:77]
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 47, in index
+    prev_url=prev_url)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 4, in template
+    {% if title %}{{ title }} - Kevin's Blog{% else %}{{ _('Welcome to Kevin/'s Blog) }}{% endif %}
+TemplateSyntaxError: expected token ',', got 's'
+2017-12-24 23:56:42,184 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
+2017-12-24 23:57:04,307 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
