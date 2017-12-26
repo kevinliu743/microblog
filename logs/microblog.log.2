@@ -1,4 +1,4 @@
-2017-12-24 21:19:15,809 ERROR: Exception on /search [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+2017-12-25 18:28:06,704 ERROR: Exception on /search [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,9 +12,9 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 143, in search
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 150, in search
     current_app.config['POSTS_PER_PAGE'])
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/models.py", line 15, in search
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/models.py", line 16, in search
     ids, total = query_index(cls.__tablename__, expression, page, per_page)
   File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/search.py", line 26, in query_index
     'from': (page - 1) * per_page, 'size': per_page})
@@ -26,13 +26,8 @@ Traceback (most recent call last):
     status, headers, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/connection/http_urllib3.py", line 156, in perform_request
     raise ConnectionError('N/A', str(e), e)
-ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x10cb4bad0>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x10cb4bad0>: Failed to establish a new connection: [Errno 61] Connection refused)
-2017-12-24 21:20:49,811 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:77]
-2017-12-24 23:49:18,510 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-24 23:53:19,526 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-24 23:54:50,909 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-24 23:55:54,280 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-24 23:55:56,875 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x109164f50>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x109164f50>: Failed to establish a new connection: [Errno 61] Connection refused)
+2017-12-25 18:28:24,452 ERROR: Exception on /search [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -46,44 +41,23 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 47, in index
-    prev_url=prev_url)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 17, in template
-    <a class="navbar-brand" href="{{ url_for('main.index') }}">Blog</a>
-TemplateSyntaxError: expected token ',', got 'main'
-2017-12-24 23:56:20,970 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-24 23:56:22,385 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 47, in index
-    prev_url=prev_url)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 4, in template
-    {% if title %}{{ title }} - Kevin's Blog{% else %}{{ _('Welcome to Kevin/'s Blog) }}{% endif %}
-TemplateSyntaxError: expected token ',', got 's'
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 150, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/models.py", line 16, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/client/utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/client/__init__.py", line 636, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/transport.py", line 314, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/connection/http_urllib3.py", line 156, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x1091866d0>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x1091866d0>: Failed to establish a new connection: [Errno 61] Connection refused)
+2017-12-25 18:42:15,184 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
+2017-12-25 18:42:21,614 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
+2017-12-26 00:35:07,548 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:86]
+2017-12-26 00:35:20,059 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:86]
+2017-12-26 00:38:37,795 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:86]

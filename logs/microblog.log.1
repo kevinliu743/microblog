@@ -1,4 +1,4 @@
-2017-12-24 23:56:29,628 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+2017-12-26 00:38:41,011 ERROR: Exception on /messages [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,8 +12,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 47, in index
-    prev_url=prev_url)
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 190, in messages
+    next_url=next_url, prev_url=prev_url)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
     context, ctx.app)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
@@ -22,41 +22,8 @@ Traceback (most recent call last):
     return self.environment.handle_exception(exc_info, True)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 4, in template
-    {% if title %}{{ title }} - Kevin's Blog{% else %}{{ _('Welcome to Kevin/'s Blog) }}{% endif %}
-TemplateSyntaxError: expected token ',', got 's'
-2017-12-24 23:56:42,184 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-24 23:57:04,307 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-25 18:19:53,495 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-25 18:20:59,455 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-25 18:25:41,894 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-25 18:26:10,732 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
-2017-12-25 18:26:13,386 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 47, in index
-    prev_url=prev_url)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/messages.html", line 1, in top-level template code
+    {% extends "base.html" %}
   File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
@@ -65,17 +32,32 @@ Traceback (most recent call last):
     {%- block html %}
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
     {% block body -%}
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 26, in block "body"
-    {% block scripts %}
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 136, in block "scripts"
-    $.ajax('{{ url_for('main.notifications') }}?since=' + since).done(
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/helpers.py", line 333, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1805, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/helpers.py", line 323, in url_for
-    force_external=external)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/werkzeug/routing.py", line 1768, in build
-    raise BuildError(endpoint, values, method, self)
-BuildError: Could not build url for endpoint 'main.notifications'. Did you mean 'main.unfollow' instead?
-2017-12-25 18:27:45,365 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:82]
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/templates/base.html", line 56, in block "content"
+    {% if current_user.is_authenticated %}
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/models.py", line 150, in get_tasks_in_progress
+    return Task.query.filter_by(user=self, complete=False).all()
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2703, in all
+    return list(self)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: task [SQL: u'SELECT task.id AS task_id, task.name AS task_name, task.description AS task_description, task.user_id AS task_user_id, task.complete AS task_complete \nFROM task \nWHERE ? = task.user_id AND task.complete = 0'] [parameters: (2,)]
