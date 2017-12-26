@@ -1,10 +1,60 @@
-2017-12-22 00:35:40,256 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 00:36:21,499 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 00:36:41,078 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 11:07:48,820 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 16:27:10,047 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 16:46:13,884 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 16:46:16,316 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+2017-12-22 17:15:40,883 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
+2017-12-22 20:54:51,678 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:45]
+2017-12-22 22:51:11,796 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:45]
+2017-12-22 22:51:35,113 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:45]
+2017-12-22 22:51:59,477 ERROR: Exception on /reset_password_request [POST] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 61, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/email.py", line 14, in send_password_reset_email
+    sender=app.config['ADMINS'][0],
+NameError: global name 'app' is not defined
+2017-12-22 22:53:52,657 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:45]
+2017-12-22 23:23:31,625 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:45]
+2017-12-22 23:41:19,486 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:47]
+2017-12-22 23:42:28,573 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:47]
+2017-12-22 23:44:16,128 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:47]
+2017-12-22 23:59:16,150 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:47]
+2017-12-23 12:47:37,261 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:49]
+2017-12-23 21:46:05,771 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:52]
+2017-12-23 21:51:22,909 ERROR: Exception on /index [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 17, in before_request
+    g.locale = str(get_locale())
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_babel/__init__.py", line 261, in get_locale
+    locale = Locale.parse(rv)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/babel/core.py", line 268, in parse
+    parts = parse_locale(identifier, sep=sep)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/babel/core.py", line 1094, in parse_locale
+    raise ValueError('expected only letters, got %r' % lang)
+ValueError: expected only letters, got 'zh-tw'
+2017-12-23 21:52:25,425 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:52]
+2017-12-23 22:19:24,862 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:52]
+2017-12-23 22:19:38,588 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:52]
+2017-12-23 22:19:48,125 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:52]
+2017-12-24 19:24:15,702 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:74]
+2017-12-24 21:12:55,393 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:77]
+2017-12-24 21:13:13,572 ERROR: Exception on /search [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -18,95 +68,19 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 29, in index
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2017-12-22 16:46:35,118 ERROR: Exception on /explore [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 44, in explore
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2017-12-22 16:47:10,441 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 16:47:14,783 ERROR: Exception on /explore [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 44, in explore
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2017-12-22 16:47:22,568 ERROR: Exception on / [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 29, in index
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2017-12-22 16:48:04,606 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 16:48:07,223 ERROR: Exception on / [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 29, in index
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2017-12-22 16:48:19,865 ERROR: Exception on /user/kevinliu743 [GET] [in /Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/routes.py", line 98, in user
-    page, app.config['POSTS_PER_PAGE'], False)
-KeyError: 'POSTS_PER_PAGE'
-2017-12-22 16:49:14,521 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
-2017-12-22 17:10:47,543 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:43]
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/main/routes.py", line 143, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/client/utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/client/__init__.py", line 636, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/transport.py", line 314, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "/Users/kevinliu743/virtualenvironment/megatutorial/lib/python2.7/site-packages/elasticsearch/connection/http_urllib3.py", line 156, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x10d53b390>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x10d53b390>: Failed to establish a new connection: [Errno 61] Connection refused)
+2017-12-24 21:19:03,849 INFO: Microblog startup [in /Users/kevinliu743/Documents/Web Development/Flask_Mega_tutorial/microblog/app/__init__.py:77]
